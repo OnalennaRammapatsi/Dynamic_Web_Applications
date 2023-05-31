@@ -1,1 +1,3 @@
 # Dynamic_Web_Applications
+
+[ONARAM970_BCL2302_Group3C_Onalenna Rammapatsi_DWA2_KnowledgeCheck.pdf](https://github.com/OnalennaRammapatsi/Dynamic_Web_Applications/files/11614609/ONARAM970_BCL2302_Group3C_Onalenna.Rammapatsi_DWA2_KnowledgeCheck.pdf)

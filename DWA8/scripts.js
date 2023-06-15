@@ -9,7 +9,7 @@ let page = 1; // Current page number
 let matches = books; // List of books that match the search filters
 
 /**
- * Creates a button element for a book.
+ * Factory function that creates a button element for a book.
  * @param {Object} book - The book object.
  * @param {string} book.author - The author of the book.
  * @param {string} book.id - The ID of the book.
@@ -18,9 +18,9 @@ let matches = books; // List of books that match the search filters
  * @returns {HTMLButtonElement} The created button element.
  */
 
-//this function takes a book object and create a button element representing the book
-// the createButtonElement function abstracts the creation of a button element representing a book. 
-const createButtonElement = ({ author, id, image, title }) => {
+const createButtonElement = (createBookPreviewbook) => {
+  const { author, id, image, title } = createBookPreviewbook;
+
   const element = document.createElement('button');
   element.classList = 'preview';
   element.setAttribute('data-preview', id);
@@ -35,6 +35,18 @@ const createButtonElement = ({ author, id, image, title }) => {
 
   return element;
 };
+
+// Example usage:
+const book = {
+  author: 'John Doe',
+  id: '123',
+  image: 'book.jpg',
+  title: 'Sample Book'
+};
+
+const buttonElement = createButtonElement(book);
+
+
 
 
   /*Initializes the starting list of book items. And also creates a document fragment

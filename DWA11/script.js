@@ -7,9 +7,9 @@ const RESET = 'RESET';
 function reducer(state = 0, action) {
   switch (action.type) {
     case INCREMENT:
-      return state + STEP_AMOUNT;
+      return state + action.payload;
     case DECREMENT:
-      return state - STEP_AMOUNT;
+      return state - action.payload;
     case RESET:
       return 0;
     default:
@@ -22,6 +22,8 @@ function createStore(reducer) {
   let state = reducer(undefined, {}); // Initialize state with reducer's default value
   const subscribers = []; // Array to hold the subscriptions
 
+    console.log('State:', state);
+  
   // Dispatch function
   function dispatch(action) {
     state = reducer(state, action); // Update the state by calling the reducer with the current state and action
@@ -33,6 +35,8 @@ function createStore(reducer) {
     subscribers.push(subscriber); // Add the subscriber to the array
   }
 
+
+
   return {
     dispatch,
     subscribe,
@@ -40,6 +44,7 @@ function createStore(reducer) {
 }
 
 // Usage
+const STEP_AMOUNT = 1; // Set the step amount for incrementing and decrementing
 const store = createStore(reducer);
 
 // Subscribe to state changes and log them to the console
@@ -48,7 +53,7 @@ store.subscribe((state) => {
 });
 
 // Dispatch actions
-store.dispatch({ type: INCREMENT });
-store.dispatch({ type: INCREMENT });
-store.dispatch({ type: DECREMENT });
+store.dispatch({ type: INCREMENT, payload: STEP_AMOUNT });
+store.dispatch({ type: INCREMENT, payload: STEP_AMOUNT });
+store.dispatch({ type: DECREMENT, payload: STEP_AMOUNT });
 store.dispatch({ type: RESET });

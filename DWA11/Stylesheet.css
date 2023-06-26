@@ -3,6 +3,7 @@
     --color-white:#ffffff ;
     --color-light-blue: #91BAD6 ;
     --color-medium-blue:#23395d ;
+    --color-light-grey: #d4d6d8d6;
 }
 * {
     box-sizing: border-box;
@@ -27,7 +28,7 @@ body {
     background: yellowgreen;
 }
 .counter {
-    background: var(--color-dark-blue);
+    background: var(--color-light-grey);
 }
 .counter_value {
     width: 100%;
@@ -38,7 +39,7 @@ body {
     color: var(--color-white);
     background: none;
     border-width: 0;
-    border-bottom: 1px solid var(--color-light-blue);
+    border-bottom: 1px solid var(--color-white);
 }
 .counter_actions {
     display: flex;
@@ -50,7 +51,7 @@ body {
     color: var(--color-white);
     font-size: 3rem;
     height: 10rem;
-    border-bottom: 1px solid var(--color-light-blue);
+    border-bottom:2px solid var(--color-white);
     transition: transform 0.3s;
     transform: translateY(0);
 }
@@ -62,7 +63,10 @@ body {
     transform: translateY(2%);
 }
 .counter_button_first {
-    border-right: 1px solid var(--color-light-blue)
+    border-right: 1px solid var(--color-white)
+}
+.counter_button_second{
+    border-right: 1px solid var(--color-white) 
 }
 .header_title {
     font-size: 4rem;
@@ -70,8 +74,8 @@ body {
     color: var(--color-light-blue) ;
 }
 .footer {
-    background: var(--color-dark-blue);
-    color: var(--color-light-blue );
+    background: var(--color-light-grey);
+    color: var(--color-white );
     padding: 2rem;
     font-size: 0.8rem;
     text-align: center;

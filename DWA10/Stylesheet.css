@@ -64,6 +64,9 @@ body {
 .counter_button_first {
     border-right: 1px solid var(--color-light-blue)
 }
+.counter_button_second{
+    border-right: 1px solid var(--color-light-blue)
+}
 .header_title {
     font-size: 4rem;
     font-weight: 900;

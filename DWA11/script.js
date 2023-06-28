@@ -37,10 +37,11 @@ function createStore(reducer) {
 
 
 
-  return {
+  const newStore = {
     dispatch,
     subscribe,
   };
+  return newStore
 }
 
 // Usage
